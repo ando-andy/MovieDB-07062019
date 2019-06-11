@@ -10,9 +10,4 @@ final class MainViewControllerTests: XCTestCase {
         super.setUp()
         viewController = MainViewController()
     }
-
-    func test_ibOutlets() {
-        XCTAssertNotNil(viewController)
-        
-    }
 }

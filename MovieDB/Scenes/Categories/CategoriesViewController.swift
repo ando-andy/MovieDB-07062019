@@ -46,5 +46,5 @@ extension CategoriesViewController {
 
 // MARK: - StoryboardSceneBased
 extension CategoriesViewController: StoryboardSceneBased {
-    static var sceneStoryboard = UIStoryboard()
+    static var sceneStoryboard = Storyboards.categories
 }
