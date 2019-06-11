@@ -1,7 +1,6 @@
 
 protocol MainNavigatorType {
     func toMain()
-    
 }
 
 struct MainNavigator: MainNavigatorType {

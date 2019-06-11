@@ -14,6 +14,5 @@ final class MovieViewControllerTests: XCTestCase {
     func test_ibOutlets() {
         _ = viewController.view
         XCTAssert(true)
-//        XCTAssertNotNil(viewController.tableView)
     }
 }

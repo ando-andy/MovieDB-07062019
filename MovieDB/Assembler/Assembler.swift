@@ -11,7 +11,7 @@ protocol Assembler: class,
     MainAssembler,
     CategoriesAssembler,
     FavoriteAssembler,
-AppAssembler {
+    AppAssembler {
     
 }
 

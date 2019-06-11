@@ -46,5 +46,5 @@ extension FavoriteViewController {
 
 // MARK: - StoryboardSceneBased
 extension FavoriteViewController: StoryboardSceneBased {
-    static var sceneStoryboard = UIStoryboard()
+    static var sceneStoryboard = Storyboards.favorite
 }

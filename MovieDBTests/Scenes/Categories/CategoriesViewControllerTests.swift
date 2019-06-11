@@ -20,6 +20,5 @@ final class CategoriesViewControllerTests: XCTestCase {
     func test_ibOutlets() {
         _ = viewController.view
         XCTAssert(true)
-//        XCTAssertNotNil(viewController.tableView)
     }
 }

@@ -10,4 +10,6 @@ import UIKit
 
 enum Storyboards {
     static let movie = UIStoryboard(name: "Movie", bundle: nil)
+    static let categories = UIStoryboard(name: "Categories", bundle: nil)
+    static let favorite = UIStoryboard(name: "Favorite", bundle: nil)
 }
