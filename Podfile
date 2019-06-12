@@ -38,12 +38,6 @@ end
     inherit! :search_paths
     # Pods for testing
   end
-
-  target 'MovieDBUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
 
 post_install do |installer|
