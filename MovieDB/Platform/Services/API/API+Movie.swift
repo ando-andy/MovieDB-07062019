@@ -6,7 +6,6 @@
 //  Copyright © 2019 Kazando. All rights reserved.
 //
 
-
 import ObjectMapper
 
 extension API {
