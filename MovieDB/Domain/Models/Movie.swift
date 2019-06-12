@@ -9,7 +9,7 @@
 import ObjectMapper
 
 struct Movie {
-    var id = 0
+    var id: Int
     var title: String
     var overview: String
     var posterPath: String

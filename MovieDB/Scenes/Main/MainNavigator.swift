@@ -37,7 +37,8 @@ struct MainNavigator: MainNavigatorType {
         ]
         window.rootViewController = mainViewController
         
-        let movieViewController: MovieViewController = assembler.resolve(navigationController: movieNavigationController)
+        let movieViewController: MovieViewController = assembler
+            .resolve(navigationController: movieNavigationController)
         movieNavigationController.pushViewController(movieViewController, animated: true)
     }
 }
