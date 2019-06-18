@@ -60,6 +60,17 @@
 		3B30E97A22AF5721002C2EC0 /* FavoriteUseCaseMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30E97622AF5721002C2EC0 /* FavoriteUseCaseMock.swift */; };
 		3B30E97C22AF82E6002C2EC0 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E97B22AF82E6002C2EC0 /* Favorite.storyboard */; };
 		3B30E97E22AF830B002C2EC0 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B30E97D22AF830B002C2EC0 /* Categories.storyboard */; };
+		3BE949ED22B08F4D006F43B7 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE949EC22B08F4D006F43B7 /* APIKey.swift */; };
+		3BED6F7222AFA24B008F86F1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7122AFA24B008F86F1 /* Movie.swift */; };
+		3BED6F7522AFAE2D008F86F1 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7422AFAE2D008F86F1 /* MovieRepository.swift */; };
+		3BED6F7922AFAE93008F86F1 /* API+Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7822AFAE93008F86F1 /* API+Movie.swift */; };
+		3BED6F7B22AFB009008F86F1 /* MovieCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7A22AFB009008F86F1 /* MovieCategoryType.swift */; };
+		3BED6F7D22AFB61F008F86F1 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7C22AFB61F008F86F1 /* APIError.swift */; };
+		3BED6F8022AFBC00008F86F1 /* APIInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F7F22AFBC00008F86F1 /* APIInput.swift */; };
+		3BED6F8222AFBC18008F86F1 /* APIOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F8122AFBC18008F86F1 /* APIOutput.swift */; };
+		3BED6F8422AFC10B008F86F1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F8322AFC10B008F86F1 /* APIService.swift */; };
+		3BED6F8622AFC3CE008F86F1 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F8522AFC3CE008F86F1 /* APIUrls.swift */; };
+		3BED6F8922AFC449008F86F1 /* MoviesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BED6F8822AFC449008F86F1 /* MoviesTest.swift */; };
 		6C3CD209EF38F73E78F93E52 /* Pods_MovieDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CD4CFDCD1C8C59945DE7C2 /* Pods_MovieDBTests.framework */; };
 		BFF4B75DDD4DB246D79AC5D9 /* Pods_MovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02334BB2B95BD3CDF32FF0A /* Pods_MovieDB.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +144,17 @@
 		3B30E97622AF5721002C2EC0 /* FavoriteUseCaseMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteUseCaseMock.swift; sourceTree = "<group>"; };
 		3B30E97B22AF82E6002C2EC0 /* Favorite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorite.storyboard; sourceTree = "<group>"; };
 		3B30E97D22AF830B002C2EC0 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		3BE949EC22B08F4D006F43B7 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		3BED6F7122AFA24B008F86F1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		3BED6F7422AFAE2D008F86F1 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		3BED6F7822AFAE93008F86F1 /* API+Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Movie.swift"; sourceTree = "<group>"; };
+		3BED6F7A22AFB009008F86F1 /* MovieCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryType.swift; sourceTree = "<group>"; };
+		3BED6F7C22AFB61F008F86F1 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		3BED6F7F22AFBC00008F86F1 /* APIInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInput.swift; sourceTree = "<group>"; };
+		3BED6F8122AFBC18008F86F1 /* APIOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOutput.swift; sourceTree = "<group>"; };
+		3BED6F8322AFC10B008F86F1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3BED6F8522AFC3CE008F86F1 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		3BED6F8822AFC449008F86F1 /* MoviesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTest.swift; sourceTree = "<group>"; };
 		4F9BFE571912D89C7372D7F5 /* Pods-MovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDB.debug.xcconfig"; path = "Target Support Files/Pods-MovieDB/Pods-MovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		62CD4CFDCD1C8C59945DE7C2 /* Pods_MovieDBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieDBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851516F04A6A1182A0F907AF /* Pods-MovieDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDBTests.release.xcconfig"; path = "Target Support Files/Pods-MovieDBTests/Pods-MovieDBTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,6 +228,7 @@
 		3B22D1F022AE0AB200BAB030 /* MovieDBTests */ = {
 			isa = PBXGroup;
 			children = (
+				3BED6F8722AFC40A008F86F1 /* Domain */,
 				3B22D21C22AE107800BAB030 /* Scenes */,
 				3B22D1F322AE0AB200BAB030 /* Info.plist */,
 				3B22D22422AE10F200BAB030 /* TestError.swift */,
@@ -232,6 +255,7 @@
 		3B22D20C22AE0DD400BAB030 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3BED6F7122AFA24B008F86F1 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +270,8 @@
 		3B22D20E22AE0DED00BAB030 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				3BED6F7A22AFB009008F86F1 /* MovieCategoryType.swift */,
+				3BE949EC22B08F4D006F43B7 /* APIKey.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -253,6 +279,8 @@
 		3B22D20F22AE0DFD00BAB030 /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				3BED6F7622AFAE67008F86F1 /* Services */,
+				3BED6F7322AFAE02008F86F1 /* Repositories */,
 			);
 			path = Platform;
 			sourceTree = "<group>";
@@ -406,6 +434,43 @@
 			path = Favorite;
 			sourceTree = "<group>";
 		};
+		3BED6F7322AFAE02008F86F1 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3BED6F7422AFAE2D008F86F1 /* MovieRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3BED6F7622AFAE67008F86F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3BED6F7722AFAE77008F86F1 /* API */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3BED6F7722AFAE77008F86F1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				3BED6F7822AFAE93008F86F1 /* API+Movie.swift */,
+				3BED6F7C22AFB61F008F86F1 /* APIError.swift */,
+				3BED6F7F22AFBC00008F86F1 /* APIInput.swift */,
+				3BED6F8122AFBC18008F86F1 /* APIOutput.swift */,
+				3BED6F8322AFC10B008F86F1 /* APIService.swift */,
+				3BED6F8522AFC3CE008F86F1 /* APIUrls.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		3BED6F8722AFC40A008F86F1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3BED6F8822AFC449008F86F1 /* MoviesTest.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		B44EFA48BA610A62CEA5D56D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +506,7 @@
 				3B22D1D622AE0AB000BAB030 /* Frameworks */,
 				3B22D1D722AE0AB000BAB030 /* Resources */,
 				2676CA16614EAB5C15A5D74A /* [CP] Embed Pods Frameworks */,
+				3BE94A0E22B0EF3D006F43B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -459,6 +525,7 @@
 				3B22D1E922AE0AB200BAB030 /* Sources */,
 				3B22D1EA22AE0AB200BAB030 /* Frameworks */,
 				3B22D1EB22AE0AB200BAB030 /* Resources */,
+				99BF2DBDC51291FAD8A8B8E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -565,24 +632,35 @@
 				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MGAPIService/MGAPIService.framework",
 				"${BUILT_PRODUCTS_DIR}/MGArchitecture/MGArchitecture.framework",
 				"${BUILT_PRODUCTS_DIR}/MGLoadMore/MGLoadMore.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
-				"${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/TagListView/TagListView.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Validator/Validator.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -591,28 +669,80 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGAPIService.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGArchitecture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGLoadMore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OrderedSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TagListView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Validator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieDB/Pods-MovieDB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BE94A0E22B0EF3D006F43B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		99BF2DBDC51291FAD8A8B8E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieDBTests/Pods-MovieDBTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieDBTests/Pods-MovieDBTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE2F4D573E515DD8268A7D7F /* [CP] Check Pods Manifest.lock */ = {
@@ -652,26 +782,36 @@
 				3B30E95D22AF510E002C2EC0 /* CategoriesViewModel.swift in Sources */,
 				3B30E97122AF570D002C2EC0 /* FavoriteViewModel.swift in Sources */,
 				3B22D21822AE0FC700BAB030 /* AppUseCase.swift in Sources */,
+				3BED6F7522AFAE2D008F86F1 /* MovieRepository.swift in Sources */,
 				3B30E97022AF570D002C2EC0 /* FavoriteUseCase.swift in Sources */,
 				3B22D25222AE340D00BAB030 /* MovieViewController.swift in Sources */,
 				3B22D25722AE4FD200BAB030 /* UnitTestViewController.swift in Sources */,
+				3BED6F8622AFC3CE008F86F1 /* APIUrls.swift in Sources */,
 				3B22D23722AE2E4F00BAB030 /* MainAssembler.swift in Sources */,
 				3B22D1DD22AE0AB000BAB030 /* AppDelegate.swift in Sources */,
 				3B30E96F22AF570D002C2EC0 /* FavoriteNavigator.swift in Sources */,
 				3B22D21922AE0FC700BAB030 /* AppNavigator.swift in Sources */,
 				3B22D21722AE0FC700BAB030 /* AppAssembler.swift in Sources */,
 				3B22D25122AE340D00BAB030 /* MovieViewModel.swift in Sources */,
+				3BED6F7B22AFB009008F86F1 /* MovieCategoryType.swift in Sources */,
 				3B22D23422AE2E4F00BAB030 /* MainUseCase.swift in Sources */,
 				3B30E95B22AF510E002C2EC0 /* CategoriesNavigator.swift in Sources */,
 				3B30E95A22AF510E002C2EC0 /* CategoriesViewController.swift in Sources */,
 				3B22D23522AE2E4F00BAB030 /* MainViewController.swift in Sources */,
 				3B22D23822AE2E4F00BAB030 /* MainNavigator.swift in Sources */,
 				3B22D25322AE340D00BAB030 /* MovieUseCase.swift in Sources */,
+				3BED6F7222AFA24B008F86F1 /* Movie.swift in Sources */,
 				3B22D25422AE340D00BAB030 /* MovieAssembler.swift in Sources */,
+				3BE949ED22B08F4D006F43B7 /* APIKey.swift in Sources */,
+				3BED6F8022AFBC00008F86F1 /* APIInput.swift in Sources */,
 				3B30E95C22AF510E002C2EC0 /* CategoriesAssembler.swift in Sources */,
+				3BED6F7922AFAE93008F86F1 /* API+Movie.swift in Sources */,
 				3B30E96D22AF570D002C2EC0 /* FavoriteViewController.swift in Sources */,
 				3B22D23622AE2E4F00BAB030 /* MainViewModel.swift in Sources */,
+				3BED6F8222AFBC18008F86F1 /* APIOutput.swift in Sources */,
 				3B30E96E22AF570D002C2EC0 /* FavoriteAssembler.swift in Sources */,
+				3BED6F8422AFC10B008F86F1 /* APIService.swift in Sources */,
+				3BED6F7D22AFB61F008F86F1 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +830,7 @@
 				3B30E96522AF5138002C2EC0 /* CategoriesUseCaseMock.swift in Sources */,
 				3B22D24A22AE340300BAB030 /* MovieUseCaseMock.swift in Sources */,
 				3B22D24022AE33E600BAB030 /* MainViewModelTests.swift in Sources */,
+				3BED6F8922AFC449008F86F1 /* MoviesTest.swift in Sources */,
 				3B30E97A22AF5721002C2EC0 /* FavoriteUseCaseMock.swift in Sources */,
 				3B30E96322AF5138002C2EC0 /* CategoriesViewControllerTests.swift in Sources */,
 				3B22D24922AE340300BAB030 /* MovieViewControllerTests.swift in Sources */,
@@ -844,6 +985,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F9BFE571912D89C7372D7F5 /* Pods-MovieDB.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -862,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BAEF280F406692F6F3E0C45F /* Pods-MovieDB.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MovieDB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

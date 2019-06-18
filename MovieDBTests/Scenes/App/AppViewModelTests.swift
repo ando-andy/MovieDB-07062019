@@ -16,7 +16,6 @@ final class AppViewModelTests: XCTestCase {
     
     private let loadTrigger = PublishSubject<Void>()
 
-
     override func setUp() {
         super.setUp()
         navigator = AppNavigatorMock()
