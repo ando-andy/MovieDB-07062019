@@ -7,8 +7,9 @@
 extension API {
     enum Urls {
         static let baseURL = "https://api.themoviedb.org/3"
-        static let baseURLImage = "http://image.tmdb.org/t/p"
+        static let baseURLImage = "https://image.tmdb.org/t/p/original"
         
         static let getMovieList = baseURL + "/movie/"
+        static let getSearchList = baseURL + "/search/movie"
     }
 }

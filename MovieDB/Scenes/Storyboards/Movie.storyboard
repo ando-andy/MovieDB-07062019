@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hAP-J9-3AY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,19 +10,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movie View Controller-->
+        <!--Movies View Controller-->
         <scene sceneID="dRr-08-f4x">
             <objects>
-                <viewController storyboardIdentifier="MovieViewController" id="hAP-J9-3AY" customClass="MovieViewController" customModule="MovieDB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesViewController" id="hAP-J9-3AY" customClass="MoviesViewController" customModule="MovieDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4oq-3H-H2u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xTc-4f-mwt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xTc-4f-mwt" firstAttribute="top" secondItem="HQM-0y-wQc" secondAttribute="top" id="O77-of-Ozs"/>
+                            <constraint firstItem="HQM-0y-wQc" firstAttribute="trailing" secondItem="xTc-4f-mwt" secondAttribute="trailing" id="de0-nv-fO4"/>
+                            <constraint firstItem="xTc-4f-mwt" firstAttribute="bottom" secondItem="HQM-0y-wQc" secondAttribute="bottom" id="efo-2w-3Sm"/>
+                            <constraint firstItem="xTc-4f-mwt" firstAttribute="leading" secondItem="HQM-0y-wQc" secondAttribute="leading" id="szW-f0-FlO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HQM-0y-wQc"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="xTc-4f-mwt" id="T7m-qD-pME"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0U-vt-qln" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="96.428571428571431"/>
         </scene>
     </scenes>
 </document>

@@ -2,7 +2,7 @@
 //  FavoriteViewController.swift
 //
 //  Created by kazutaka.ando on 6/11/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
+//  Copyright © 2019 kazando All rights reserved.
 //
 
 import UIKit

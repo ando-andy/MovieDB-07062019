@@ -1,4 +1,3 @@
-
 struct AppViewModel {
     let navigator: AppNavigatorType
     let useCase: AppUseCaseType
@@ -17,7 +16,6 @@ extension AppViewModel: ViewModelType {
     func transform(_ input: Input) -> Output {
         let toMain = input.loadTrigger
             .do(onNext: navigator.toMain)
-        
         return Output(toMain: toMain)
     }
 }

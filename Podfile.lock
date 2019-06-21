@@ -36,6 +36,7 @@ PODS:
     - GoogleUtilities/Reachability (~> 6.0)
     - GoogleUtilities/UserDefaults (~> 6.0)
     - Protobuf (~> 3.1)
+  - FSPagerView (0.8.2)
   - GoogleAppMeasurement (6.0.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -128,6 +129,7 @@ DEPENDENCIES:
   - ActionSheetPicker-3.0 (= 2.3)
   - Firebase/Core
   - Firebase/Messaging
+  - FSPagerView
   - Hero
   - IQKeyboardManagerSwift
   - Localize-Swift (= 2.0)
@@ -164,6 +166,7 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseInstanceID
     - FirebaseMessaging
+    - FSPagerView
     - GoogleAppMeasurement
     - GoogleUtilities
     - Hero
@@ -207,6 +210,7 @@ SPEC CHECKSUMS:
   FirebaseCore: e38f025287b413255a53acc1945d048a112047f7
   FirebaseInstanceID: 0e0348a3c00a734fa376a070f5ad4533ad975cb5
   FirebaseMessaging: c796d50864dc822a3c06c9c1c1444b37732b795b
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   GoogleAppMeasurement: 7f028ea162b72c8f326daec74afc95d94f7a47d6
   GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
@@ -240,6 +244,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: dfb6187428c7b1af47c7055080927c090fa320a3
+PODFILE CHECKSUM: 7ed95f54b402e6dde8f1e2382d0756d6967da8b4
 
 COCOAPODS: 1.6.1

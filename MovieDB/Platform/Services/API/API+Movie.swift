@@ -12,18 +12,22 @@ extension API {
     func getMovieList(_ input: GetMovieListInput) -> Observable<GetMovieListOutput> {
         return request(input)
     }
+    
+    func getSearchMovieList(_ input: GetSearchMovieListInput) -> Observable<GetSearchMovieListOutput> {
+        return request(input)
+    }
 }
 
 // MARK: - GetRepoList
 extension API {
     final class GetMovieListInput: APIInput {
-        init(category: MovieCategoryType, page: Int) {
+        init(category: CategoryType, page: Int) {
             let params: JSONDictionary = [
                 "api_key": Keys.APIKey,
-                //created on APIKey in Support dir and added to gitignore
+                //created in Support dir and added to gitignore
                 "page": page
             ]
-            super.init(urlString: API.Urls.getMovieList + category.rawValue,
+            super.init(urlString: API.Urls.getMovieList + category.urlString,
                        parameters: params,
                        requestType: .get,
                        requireAccessToken: true)
@@ -31,6 +35,31 @@ extension API {
     }
     
     final class GetMovieListOutput: APIOutput {
+        private(set) var movies: [Movie]?
+        
+        override func mapping(map: Map) {
+            super.mapping(map: map)
+            movies <- map["results"]
+        }
+    }
+
+// MARK: - GetRepoList
+    final class GetSearchMovieListInput: APIInput {
+        init(keySearch: String, page: Int) {
+            let params: JSONDictionary = [
+                "api_key": Keys.APIKey,
+                //created in Support dir and added to gitignore
+                "query": keySearch,
+                "page": page
+            ]
+            super.init(urlString: API.Urls.getSearchList,
+                       parameters: params,
+                       requestType: .get,
+                       requireAccessToken: true)
+        }
+    }
+    
+    final class GetSearchMovieListOutput: APIOutput {
         private(set) var movies: [Movie]?
         
         override func mapping(map: Map) {

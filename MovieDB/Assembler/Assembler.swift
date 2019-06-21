@@ -7,10 +7,11 @@
 //
 
 protocol Assembler: class,
-    MovieAssembler,
+    MoviesAssembler,
     MainAssembler,
     CategoriesAssembler,
     FavoriteAssembler,
+    RepositoriesAssembler,
     AppAssembler {
     
 }

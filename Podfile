@@ -31,6 +31,7 @@ def pods
   pod 'TagListView', '1.4'
   pod 'Hero'
   pod 'Nuke', '7.6'
+  pod 'FSPagerView'
   pod 'SwiftLint'
   
   # Firebase Push

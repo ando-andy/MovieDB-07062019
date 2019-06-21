@@ -1,4 +1,3 @@
-
 @testable import MovieDB
 
 final class MainNavigatorMock: MainNavigatorType {

@@ -25,11 +25,12 @@ extension Movie {
             overview: "",
             posterPath: "",
             voteCount: 0,
-            backdropPath: "")
+            backdropPath: ""
+        )
     }
 }
 
-extension Movie: Then, HasID, Hashable {}
+extension Movie: Then, HasID, Hashable { }
 
 extension Movie: Mappable {
     
@@ -43,7 +44,6 @@ extension Movie: Mappable {
         overview <- map["overview"]
         posterPath <- map["poster_path"]
         voteCount <- map["vote_count"]
-        backdropPath <- map ["backdrop_path"]
+        backdropPath <- map["backdrop_path"]
     }
 }
-

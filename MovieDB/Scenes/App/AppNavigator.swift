@@ -9,7 +9,7 @@ struct AppNavigator: AppNavigatorType {
     unowned let window: UIWindow
     
     func toMain() {
-        let navigator: MainNavigatorType = assembler.resolve(window: window)
-        navigator.toMain()
+        let mainVC: MainViewController = assembler.resolve()
+        window.rootViewController = mainVC
     }
 }
