@@ -10,7 +10,8 @@ import UIKit
 import RxSwift
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {  // swiftlint:disable:this final_class
+
+class AppDelegate: UIResponder, UIApplicationDelegate { // swiftlint:disable:this final_class
     
     var window: UIWindow?
     var assembler: Assembler = DefaultAssembler()

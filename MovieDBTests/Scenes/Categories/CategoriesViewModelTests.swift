@@ -14,6 +14,7 @@ final class CategoriesViewModelTests: XCTestCase {
     private var viewModel: CategoriesViewModel!
     private var navigator: CategoriesNavigatorMock!
     private var useCase: CategoriesUseCaseMock!
+    private var category: CategoryType!
     
     private var input: CategoriesViewModel.Input!
     private var output: CategoriesViewModel.Output!
@@ -24,7 +25,7 @@ final class CategoriesViewModelTests: XCTestCase {
         super.setUp()
         navigator = CategoriesNavigatorMock()
         useCase = CategoriesUseCaseMock()
-        viewModel = CategoriesViewModel(navigator: navigator, useCase: useCase)
+        viewModel = CategoriesViewModel(navigator: navigator, useCase: useCase, category: category)
 
         input = CategoriesViewModel.Input()
         output = viewModel.transform(input)

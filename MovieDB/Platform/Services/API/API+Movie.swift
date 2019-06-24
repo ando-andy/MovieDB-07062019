@@ -12,10 +12,11 @@ extension API {
     func getMovieList(_ input: GetMovieListInput) -> Observable<GetMovieListOutput> {
         return request(input)
     }
-    
+
     func getSearchMovieList(_ input: GetSearchMovieListInput) -> Observable<GetSearchMovieListOutput> {
         return request(input)
     }
+
 }
 
 // MARK: - GetRepoList

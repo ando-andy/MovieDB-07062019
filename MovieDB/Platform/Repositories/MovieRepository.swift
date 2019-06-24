@@ -36,5 +36,4 @@ final class MoviesRepository: MoviesRepositoryType {
                 return PagingInfo<Movie>(page: page, items: movies)
             }
     }
-    
 }

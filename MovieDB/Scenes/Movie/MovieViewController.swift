@@ -1,13 +1,13 @@
 import UIKit
 import Reusable
 
-final class MainViewController: UITabBarController, BindableType {
+final class MovieViewController: UITabBarController, BindableType {
     
     // MARK: - IBOutlets
     
     // MARK: - Properties
     
-    var viewModel: MainViewModel!
+    var viewModel: MovieViewModel!
 
     // MARK: - Life Cycle
     
@@ -27,12 +27,17 @@ final class MainViewController: UITabBarController, BindableType {
     }
 
     func bindViewModel() {
-        let input = MainViewModel.Input()
+        let input = MovieViewModel.Input()
         let output = viewModel.transform(input)
     }
 }
 
 // MARK: - Binders
-extension MainViewController {
+extension MovieViewController {
 
+}
+
+// MARK: - StoryboardSceneBased
+extension MovieViewController: StoryboardSceneBased {
+    static var sceneStoryboard = Storyboards.movie
 }

@@ -3,11 +3,11 @@ import XCTest
 import Reusable
 
 final class MovieViewControllerTests: XCTestCase {
-    var viewController: MovieViewController!
+    var viewController: MoviesViewController!
 
     override func setUp() {
         super.setUp()
-        viewController = MovieViewController.instantiate()
+        viewController = MoviesViewController.instantiate()
     }
 
     func test_ibOutlets() {

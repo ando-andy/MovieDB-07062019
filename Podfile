@@ -5,18 +5,18 @@ def pods
   pod 'MGArchitecture', '0.4.0'
   pod 'MGAPIService', '0.6.0'
   pod 'MGLoadMore', '0.3.0'
-  
+
   # Core
   pod 'ObjectMapper', '3.3'
   pod 'Reusable', '4.0.4'
   pod 'Then', '2.4'
   pod 'MJRefresh', '3.1'
   pod 'Validator', '3.0.2'
-  
+
   # Rx
   pod 'NSObject+Rx', '4.4'
   pod 'RxDataSources', '3.1'
-  
+
   #
   pod 'MBProgressHUD', '1.1'
   pod 'SDWebImage', '5.0'
@@ -33,7 +33,7 @@ def pods
   pod 'Nuke', '7.6'
   pod 'FSPagerView'
   pod 'SwiftLint'
-  
+
   # Firebase Push
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
@@ -47,12 +47,12 @@ target 'MovieDB' do
   use_frameworks!
   inhibit_all_warnings!
   pods
-  
+
   target 'MovieDBTests' do
     inherit! :search_paths
     test_pods
   end
-  
+
 end
 
 post_install do |installer|
