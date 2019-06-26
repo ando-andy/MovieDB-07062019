@@ -31,24 +31,28 @@ extension CategoriesViewModel: ViewModelType {
     }
     
     func transform(_ input: Input) -> Output {
-        let loadTrigger = input.loadTrigger
-            .map { _ in self.category }
-        let reloadTrigger = input.reloadTrigger
-            .withLatestFrom(loadTrigger)
-        let loadMoreTrigger = input.loadMoreTrigger
-            .withLatestFrom(loadTrigger)
+//        let loadTrigger = input.loadTrigger
+//            .map { _ in self.category }
+//        let reloadTrigger = input.reloadTrigger
+//            .withLatestFrom(loadTrigger)
+//        let loadMoreTrigger = input.loadMoreTrigger
+//            .withLatestFrom(loadTrigger)
         
-        let loadMoreOutput = setupLoadMorePagingWithParam(loadTrigger: loadTrigger,
-                                                          getItems: useCase.getMoviesList,
-                                                          refreshTrigger: reloadTrigger,
-                                                          refreshItems: useCase.getMoviesList,
-                                                          loadMoreTrigger: loadMoreTrigger,
-                                                          loadMoreItems: useCase.loadMoreMoviesList)
+        let configOutput = configPagination(
+            loadTrigger: input.loadTrigger,
+            reloadTrigger: input.reloadTrigger,
+            getItems: {
+                self.useCase.getMoviesList(self.category)
+            },
+            loadMoreTrigger: input.loadMoreTrigger,
+            loadMoreItems: { page in
+                self.useCase.loadMoreMoviesList(category: self.category, page: page)
+            })
         
-        let (page, fetchItems, loadError, loading, refreshing, loadingMore) = loadMoreOutput
+        let (page, fetchItems, loadError, loading, refreshing, loadingMore) = configOutput
         
         let movieList = page
-            .map { $0.items.map {$0} }
+            .map { $0.items.map { $0 } }
             .asDriverOnErrorJustComplete()
         
         let selectedMovie = input.selectMovieTrigger

@@ -73,11 +73,11 @@ final class CategoriesViewController: UIViewController, BindableType {
             .disposed(by: rx.disposeBag)
         
         output.refreshing
-            .drive(tableView.loadingMoreTop)
+            .drive(tableView.isLoadingMoreTop)
             .disposed(by: rx.disposeBag)
         
         output.loadingMore
-            .drive(tableView.loadingMoreBottom)
+            .drive(tableView.isLoadingMoreBottom)
             .disposed(by: rx.disposeBag)
         
         output.fetchItems

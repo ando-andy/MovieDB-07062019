@@ -15,7 +15,7 @@ final class CategoriesTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var nameLabel: UILabel!
     
     func bindViewModel(_ viewModel: MovieViewModel?) {
-        nameLabel.text = viewModel?.name ?? ""
+        nameLabel.text = viewModel?.name
         posterImage.sd_setImage(with: viewModel?.posterImageURL, completed: nil)
     }
 }
