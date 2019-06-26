@@ -29,8 +29,8 @@ extension CategoriesAssembler {
     func resolve(navigationController: UINavigationController,
                  category: CategoryType) -> CategoriesViewModel {
         return CategoriesViewModel(
-            navigator: resolve(navigationController: navigationController),
             useCase: resolve(),
+            navigator: resolve(navigationController: navigationController),
             category: category
         )
     }
@@ -43,6 +43,6 @@ extension CategoriesAssembler where Self: DefaultAssembler {
     }
 
     func resolve() -> CategoriesUseCaseType {
-        return CategoriesUseCase()
+        return CategoriesUseCase(movieRepository: resolve())
     }
 }

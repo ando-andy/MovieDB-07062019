@@ -12,7 +12,6 @@ final class CategoryCell: UITableViewCell, NibReusable {
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var showAll: UIButton!
     
     var showAllAction: (() -> Void)?
     
@@ -35,5 +34,9 @@ final class CategoryCell: UITableViewCell, NibReusable {
         collectionView.tag = row
         collectionView.setContentOffset(collectionView.contentOffset, animated: false)
         collectionView.reloadData()
+    }
+
+    @IBAction func showAll(_ sender: UIButton) {
+        showAllAction?()
     }
 }

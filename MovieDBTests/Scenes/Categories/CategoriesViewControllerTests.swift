@@ -9,16 +9,16 @@
 import XCTest
 import Reusable
 
-final class CategoriesViewControllerTests: XCTestCase {
-    var viewController: CategoriesViewController!
-
+final class CategoryViewControllerTests: XCTest {
+    private var viewController: CategoriesViewController!
+    
     override func setUp() {
         super.setUp()
         viewController = CategoriesViewController.instantiate()
     }
-
+    
     func test_ibOutlets() {
         _ = viewController.view
-        XCTAssert(true)
+        XCTAssertNotNil(viewController.tableView)
     }
 }

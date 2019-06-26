@@ -17,9 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="9g4-7X-wtQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="odT-G2-tje" customClass="RefreshTableView" customModule="MGLoadMore">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="odT-G2-tje" firstAttribute="top" secondItem="Vtc-Oq-T1t" secondAttribute="top" id="7Mf-r0-WT5"/>
+                            <constraint firstItem="odT-G2-tje" firstAttribute="leading" secondItem="Vtc-Oq-T1t" secondAttribute="leading" id="B4Q-MX-xH5"/>
+                            <constraint firstItem="Vtc-Oq-T1t" firstAttribute="trailing" secondItem="odT-G2-tje" secondAttribute="trailing" id="P3l-9O-eJn"/>
+                            <constraint firstItem="Vtc-Oq-T1t" firstAttribute="bottom" secondItem="odT-G2-tje" secondAttribute="bottom" id="vWN-Sz-GcM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vtc-Oq-T1t"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="odT-G2-tje" id="zUM-UA-TlF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBf-iV-tzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
