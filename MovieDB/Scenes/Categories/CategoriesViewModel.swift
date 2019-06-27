@@ -31,23 +31,16 @@ extension CategoriesViewModel: ViewModelType {
     }
     
     func transform(_ input: Input) -> Output {
-//        let loadTrigger = input.loadTrigger
-//            .map { _ in self.category }
-//        let reloadTrigger = input.reloadTrigger
-//            .withLatestFrom(loadTrigger)
-//        let loadMoreTrigger = input.loadMoreTrigger
-//            .withLatestFrom(loadTrigger)
-        
+
         let configOutput = configPagination(
             loadTrigger: input.loadTrigger,
             reloadTrigger: input.reloadTrigger,
-            getItems: {
-                self.useCase.getMoviesList(self.category)
-            },
+            getItems: { self.useCase.getMoviesList(self.category) },
             loadMoreTrigger: input.loadMoreTrigger,
             loadMoreItems: { page in
                 self.useCase.loadMoreMoviesList(category: self.category, page: page)
-            })
+            }
+        )
         
         let (page, fetchItems, loadError, loading, refreshing, loadingMore) = configOutput
         

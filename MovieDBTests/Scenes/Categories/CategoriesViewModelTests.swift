@@ -179,9 +179,9 @@ final class CategoriesViewModelTests: XCTestCase {
         XCTAssertFalse(useCase.loadMoreMoveListCalled)
     }
     
-    func test_selectMovieTriggerInvoked_toMovieDetail() {
-        loadTrigger.onNext(())
-        selectMovieTrigger.onNext(IndexPath(row: 0, section: 0))
-        //XCTAssert(navigator.toMovieDetailCalled)
-    }
+//    func test_selectMovieTriggerInvoked_toMovieDetail() {
+//        loadTrigger.onNext(())
+//        selectMovieTrigger.onNext(IndexPath(row: 0, section: 0))
+//        XCTAssert(navigator.toMovieDetailCalled)
+//    }
 }

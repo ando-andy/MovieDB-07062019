@@ -17,6 +17,8 @@ struct MoviesNavigator: MoviesNavigatorType {
     }
     
     func toSearchMovies() {
+        let vc: SearchViewController = assembler.resolve(navigationController: navigationController)
+        navigationController.pushViewController(vc, animated: true)
     }
     
     func toMoviesDetail() {

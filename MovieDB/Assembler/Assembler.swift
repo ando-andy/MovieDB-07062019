@@ -12,6 +12,7 @@ protocol Assembler: class,
     CategoriesAssembler,
     FavoriteAssembler,
     RepositoriesAssembler,
+    SearchAssembler,
     AppAssembler {
     
 }
