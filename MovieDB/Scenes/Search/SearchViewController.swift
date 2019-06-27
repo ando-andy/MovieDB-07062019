@@ -16,8 +16,8 @@ final class SearchViewController: UIViewController, BindableType {
     // MARK: - Properties
     
     var viewModel: SearchViewModel!
-    var searchTerms = ""
-    var searchWasCancelled = false
+    private var searchTerms = ""
+    private var searchWasCancelled = false
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -49,12 +49,12 @@ final class SearchViewController: UIViewController, BindableType {
             $0.title = "Search Movie"
         }
         
-        self.searchController.do {
+        searchController.do {
             $0.searchBar.delegate = self
             $0.searchBar.placeholder = "Enter Keyword"
         }
         
-        self.navigationItem.do {
+        navigationItem.do {
             $0.searchController = searchController
             $0.hidesSearchBarWhenScrolling = false
             $0.searchController?.obscuresBackgroundDuringPresentation = false
@@ -110,9 +110,9 @@ final class SearchViewController: UIViewController, BindableType {
             .drive()
             .disposed(by: rx.disposeBag)
         
-//        output.selectedMovie
-//            .drive()
-//            .disposed(by: rx.disposeBag)
+        output.selectedMovie
+            .drive()
+            .disposed(by: rx.disposeBag)
         
         output.isEmptyData
             .drive(tableView.isEmptyData)
@@ -133,7 +133,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchTerms = searchBar.text ?? " "
+        searchTerms = searchBar.text ?? ""
         searchWasCancelled = true
     }
     
@@ -141,7 +141,7 @@ extension SearchViewController: UISearchBarDelegate {
         if searchWasCancelled {
             searchBar.text = self.searchTerms
         } else {
-            searchTerms = searchBar.text ?? " "
+            searchTerms = searchBar.text ?? ""
         }
     }
 }
