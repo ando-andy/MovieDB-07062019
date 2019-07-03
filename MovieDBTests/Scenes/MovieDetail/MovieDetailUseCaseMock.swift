@@ -10,7 +10,7 @@ import RxSwift
 
 final class MovieDetailUseCaseMock: MovieDetailUseCaseType {
     
-    //MARK: getMovieDetail
+    // MARK: - getMovieDetail
     var getMovieDetailCalled = false
     
     var getMovieDetailReturnValue: Observable<Movie> = {

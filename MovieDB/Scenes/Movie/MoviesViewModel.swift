@@ -101,10 +101,7 @@ extension MoviesViewModel: ViewModelType {
         
         let selectedBanner = input.selectedBannerTrigger
             .withLatestFrom(movieBannerList) {
-                return ($0, $1)
-            }
-            .map { (indexPath, movieBanners) in
-                return movieBanners[indexPath.row]
+                return $1[$0.row]
             }
             .do(onNext: { (movie) in
                 self.navigator.toMovieDetail(movie: movie)
