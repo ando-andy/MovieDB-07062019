@@ -14,7 +14,9 @@ struct Movie {
     var overview: String
     var posterPath: String
     var voteCount: Int
+    var voteAverage: Double
     var backdropPath: String
+    var runtime: Int
 }
 
 extension Movie {
@@ -25,7 +27,9 @@ extension Movie {
             overview: "",
             posterPath: "",
             voteCount: 0,
-            backdropPath: ""
+            voteAverage: 0.0,
+            backdropPath: "",
+            runtime: 0
         )
     }
 }
@@ -45,5 +49,7 @@ extension Movie: Mappable {
         posterPath <- map["poster_path"]
         voteCount <- map["vote_count"]
         backdropPath <- map["backdrop_path"]
+        runtime <- map["runtime"]
+        voteAverage <- map["vote_average"]
     }
 }

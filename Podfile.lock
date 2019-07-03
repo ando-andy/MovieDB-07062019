@@ -1,6 +1,7 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Alamofire (4.8.2)
+  - Cosmos (19.0.3)
   - Differentiator (4.0.1)
   - Firebase/Core (6.3.0):
     - Firebase/CoreOnly
@@ -126,6 +127,7 @@ PODS:
 
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (= 2.3)
+  - Cosmos (~> 19.0)
   - Firebase/Core
   - Firebase/Messaging
   - FSPagerView
@@ -158,6 +160,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ActionSheetPicker-3.0
     - Alamofire
+    - Cosmos
     - Differentiator
     - Firebase
     - FirebaseAnalytics
@@ -202,6 +205,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Firebase: 8432d732974498afd5987e9001a05f90f1a3d625
   FirebaseAnalytics: 470ddab7253b21ad5a40bebd4a9903d7ae19386a
@@ -243,6 +247,6 @@ SPEC CHECKSUMS:
   Then: 71866660c7af35a7343831f7668e7cd2b62ee0f2
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: 0461385f09428d5248d5548014b7b8042fe4213a
+PODFILE CHECKSUM: fe544da9361a85ddc08ec3ccb08d599c59ac7747
 
 COCOAPODS: 1.7.2

@@ -7,10 +7,10 @@
 @testable import MovieDB
 
 final class SearchNavigatorMock: SearchNavigatorType {
-    
+
     var toMovieDetailCalled = false
-    
-    func toMovieDetail() {
-        toMovieDetailCalled = false
+
+    func toMovieDetail(movie: Movie) {
+        toMovieDetailCalled = true
     }
 }

@@ -11,7 +11,7 @@ final class CategoriesNavigatorMock: CategoriesNavigatorType {
     
     var toMovieDetailCalled = false
 
-    func toMovieDetail() {
+    func toMovieDetail(movie: Movie) {
         toMovieDetailCalled = true
     }
 }

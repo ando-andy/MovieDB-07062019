@@ -8,10 +8,15 @@
 
 protocol RepositoriesAssembler {
     func resolve() -> MoviesRepositoryType
+    func resolve() -> MovieDetailRepositoryType
 }
 
 extension RepositoriesAssembler where Self: DefaultAssembler {
     func resolve() -> MoviesRepositoryType {
         return MoviesRepository()
+    }
+    
+    func resolve() -> MovieDetailRepositoryType {
+        return MovieDetailRepository()
     }
 }

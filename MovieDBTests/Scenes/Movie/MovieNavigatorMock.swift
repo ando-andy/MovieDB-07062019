@@ -1,17 +1,19 @@
 @testable import MovieDB
 
 final class MoviesNavigatorMock: MoviesNavigatorType {
-    var toMoviesCategory = false
-    var toSearchMovie = false
+    var toMoviesCategoryCalled = false
+    var toSearchMovieCalled = false
+    var toMovieDetailCalled = false
     
     func toMoviesCategory(category: CategoryType) {
-        toMoviesCategory = true
+        toMoviesCategoryCalled = true
     }
     
     func toSearchMovies() {
-        toSearchMovie = false
+        toSearchMovieCalled = true
     }
     
-    func toMoviesDetail() {
+    func toMovieDetail(movie: Movie) {
+        toMovieDetailCalled = true
     }
 }

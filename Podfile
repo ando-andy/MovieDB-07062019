@@ -33,6 +33,7 @@ def pods
   pod 'Nuke', '7.6'
   pod 'FSPagerView'
   pod 'SwiftLint'
+  pod 'Cosmos', '~> 19.0'
 
   # Firebase Push
   pod 'Firebase/Core'

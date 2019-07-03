@@ -19,7 +19,9 @@ final class MoviesHeaderView: UIView, NibLoadable {
             self.pagerView.itemSize = FSPagerView.automaticSize
         }
     }
-    
+
+    var handleShowMovieDetail: ((_ index: Int) -> Void )?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         configView()

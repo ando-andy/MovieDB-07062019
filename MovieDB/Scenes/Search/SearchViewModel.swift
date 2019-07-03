@@ -56,7 +56,7 @@ extension SearchViewModel: ViewModelType {
                 return $1[$0.row]
             }
             .do(onNext: { (movie) in
-                // TODO
+                self.navigator.toMovieDetail(movie: movie)
             })
             .mapToVoid()
         

@@ -6,7 +6,6 @@
 //  Copyright © 2019 Kazando. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 struct MovieViewModel {
@@ -16,11 +15,27 @@ struct MovieViewModel {
         return movie.title
     }
     
+    var overview: String {
+        return movie.overview
+    }
+    
+    var voteCount: Int {
+        return movie.voteCount
+    }
+    
+    var voteAverage: Double {
+        return movie.voteAverage
+    }
+    
     var posterImageURL: URL? {
         return URL(string: API.Urls.baseURLImage + movie.posterPath)
     }
     
     var backdropImageURL: URL? {
         return URL(string: API.Urls.baseURLImage + movie.backdropPath)
+    }
+    
+    var runtime: Int {
+        return movie.runtime
     }
 }

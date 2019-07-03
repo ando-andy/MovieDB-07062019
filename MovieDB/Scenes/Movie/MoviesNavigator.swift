@@ -1,7 +1,7 @@
 protocol MoviesNavigatorType {
     func toMoviesCategory(category: CategoryType)
     func toSearchMovies()
-    func toMoviesDetail()
+    func toMovieDetail(movie: Movie)
 }
 
 struct MoviesNavigator: MoviesNavigatorType {
@@ -21,6 +21,9 @@ struct MoviesNavigator: MoviesNavigatorType {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func toMoviesDetail() {
+    func toMovieDetail(movie: Movie) {
+        let vc: MovieDetailViewController = assembler.resolve(navigationController: navigationController,
+                                                              movie: movie)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

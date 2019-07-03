@@ -5,15 +5,17 @@
 //
 
 protocol SearchNavigatorType {
-    func toMovieDetail()
+    func toMovieDetail(movie: Movie)
 }
 
 struct SearchNavigator: SearchNavigatorType {
     unowned let assembler: Assembler
     unowned let navigationController: UINavigationController
     
-    func toMovieDetail() {
-        //TODO
+    func toMovieDetail(movie: Movie) {
+        let vc: MovieDetailViewController = assembler.resolve(navigationController: navigationController,
+                                                              movie: movie)
+        navigationController.pushViewController(vc, animated: true)
     }
 
 }

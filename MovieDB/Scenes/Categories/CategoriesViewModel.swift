@@ -53,7 +53,7 @@ extension CategoriesViewModel: ViewModelType {
                 return $1[$0.row]
             }
             .do(onNext: { (movie) in
-                // ToDO
+                self.navigator.toMovieDetail(movie: movie)
             })
             .mapToVoid()
         

@@ -16,18 +16,76 @@ final class MovieViewModelTests: XCTestCase {
     private let loadTrigger = PublishSubject<Void>()
     private let selectedCategoryTrigger = PublishSubject<IndexPath>()
     private let searchMovieTrigger = PublishSubject<Void>()
+    private let selectedBannerTrigger = PublishSubject<IndexPath>()
+    private let selectedMovieTrigger = PublishSubject<Movie>()
     
     override func setUp() {
         super.setUp()
         navigator = MoviesNavigatorMock()
         useCase = MovieUseCaseMock()
         viewModel = MoviesViewModel(navigator: navigator, useCase: useCase)
+        disposeBag = DisposeBag()
 
         input = MoviesViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete(),
                                       selectedCategoryTrigger: selectedCategoryTrigger.asDriverOnErrorJustComplete(),
-                                      searchMovieTrigger: searchMovieTrigger.asDriverOnErrorJustComplete())
+                                      searchMovieTrigger: searchMovieTrigger.asDriverOnErrorJustComplete(),
+                                      selectedBannerTrigger: selectedBannerTrigger.asDriverOnErrorJustComplete(),
+                                      selectedMovieTrigger: selectedMovieTrigger.asDriverOnErrorJustComplete()
+        )
+        
         output = viewModel.transform(input)
-
-        disposeBag = DisposeBag()
+        output.movieCategoryList.drive().disposed(by: disposeBag)
+        output.movieBannerList.drive().disposed(by: disposeBag)
+        output.selectedCategory.drive().disposed(by: disposeBag)
+        output.searchMovie.drive().disposed(by: disposeBag)
+        output.selectedBanner.drive().disposed(by: disposeBag)
+        output.selectedMovie.drive().disposed(by: disposeBag)
+    }
+    
+    func test_loadTriggerInvoked_getMovieList() {
+        // act
+        loadTrigger.onNext(())
+        let movieList = try? output.movieBannerList.toBlocking(timeout: 1).first()
+        let movieCategoryList = try? output.movieCategoryList.toBlocking(timeout: 1).first()
+        
+        // assert
+        XCTAssert(useCase.getMovieListCalled)
+        XCTAssertEqual(movieList?.count, 1)
+        XCTAssertEqual(movieCategoryList?.count, 4)
+    }
+    
+    func test_selectCategoryTriggerInvoked_toMovieCategoryList() {
+        // act
+        loadTrigger.onNext(())
+        selectedCategoryTrigger.onNext(IndexPath(row: 0, section: 0))
+        
+        // assert
+        XCTAssert(navigator.toMoviesCategoryCalled)
+    }
+    
+    func test_selectedBannerTriggerInvoked_toMovieDetail() {
+        // act
+        loadTrigger.onNext(())
+        selectedBannerTrigger.onNext(IndexPath(row: 0, section: 0))
+        
+        // assert
+        XCTAssert(navigator.toMovieDetailCalled)
+    }
+    
+    func test_searchMovieTriggerInvoked_toSearchMovie() {
+        // act
+        searchMovieTrigger.onNext(())
+        
+        // assert
+        XCTAssert(navigator.toSearchMovieCalled)
+    }
+    
+    func test_selectedMovieTriggerInvoked_toMovieDetail() {
+        // act
+        loadTrigger.onNext(())
+        selectedMovieTrigger.onNext(Movie())
+        
+        // assert
+        XCTAssert(navigator.toMovieDetailCalled)
     }
 }
