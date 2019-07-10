@@ -2,7 +2,7 @@
 //  MovieDetailViewControllerTests.swift
 //
 //  Created by kazutaka.ando on 6/27/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
+
 //
 
 @testable import MovieDB

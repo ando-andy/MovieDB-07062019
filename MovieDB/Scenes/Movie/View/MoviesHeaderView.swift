@@ -61,6 +61,7 @@ extension MoviesHeaderView: FSPagerViewDataSource, FSPagerViewDelegate {
             $0.deselectItem(at: index, animated: true)
             $0.scrollToItem(at: index, animated: true)
         }
+        handleShowMovieDetail?(index)
     }
 }
 

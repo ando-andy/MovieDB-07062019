@@ -6,8 +6,6 @@
 //  Copyright © 2019 Kazando. All rights reserved.
 //
 
-import UIKit
-
 protocol MoviesRepositoryType {
     func getMoviesList(category: CategoryType, page: Int) -> Observable<PagingInfo<Movie>>
     

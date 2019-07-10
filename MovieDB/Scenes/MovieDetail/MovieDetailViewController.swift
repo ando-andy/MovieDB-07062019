@@ -2,7 +2,6 @@
 //  MovieDetailViewController.swift
 //
 //  Created by kazutaka.ando on 6/27/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
 //
 
 import UIKit
@@ -26,6 +25,8 @@ final class MovieDetailViewController: UIViewController, BindableType {
     // MARK: - Properties
     
     var viewModel: MovieDetailViewModel!
+    
+    fileprivate var showCastDetailTrigger = PublishSubject<IndexPath>()
 
     // MARK: - Life Cycle
     
@@ -53,13 +54,20 @@ final class MovieDetailViewController: UIViewController, BindableType {
 
     private func configView() {
         self.title = self.viewModel.movie.title
-        //castCollectionView.delegate = self
+        castCollectionView.do {
+            $0.delegate = self
+            $0.register(cellType: CastCell.self)
+        }
+        
     }
 
     func bindViewModel() {
         let input = MovieDetailViewModel.Input(
             loadTrigger: Driver.just(()),
-            backwardTrigger: backButton.rx.tap.asDriverOnErrorJustComplete())
+            showCastDetailTrigger: showCastDetailTrigger.asDriverOnErrorJustComplete(),
+            backwardTrigger: backButton.rx.tap.asDriverOnErrorJustComplete()
+        )
+        
         let output = viewModel.transform(input)
         
         output.movieDetail
@@ -67,7 +75,22 @@ final class MovieDetailViewController: UIViewController, BindableType {
             .drive(model)
             .disposed(by: rx.disposeBag)
         
+        output.castList
+            .drive(castCollectionView.rx.items) { collectionView, index, cast in
+                return collectionView.dequeueReusableCell(
+                    for: IndexPath(row: index, section: 0),
+                    cellType: CastCell.self)
+                    .then {
+                        $0.bindingViewModel(CastMovieDetailViewModel(cast: cast))
+                    }
+            }
+            .disposed(by: rx.disposeBag)
+        
         output.backward
+            .drive()
+            .disposed(by: rx.disposeBag)
+        
+        output.showCastDetail
             .drive()
             .disposed(by: rx.disposeBag)
     }
@@ -106,6 +129,10 @@ extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewD
         let height = collectionView.frame.size.height
         let width = height / 2
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        showCastDetailTrigger.onNext(IndexPath(item: indexPath.row, section: 0))
     }
 
     func collectionView(_ collectionView: UICollectionView,

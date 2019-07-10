@@ -20,6 +20,14 @@ extension API {
     func getMovieDetail(_ input: GetMovieDetailInput) -> Observable<Movie> {
         return request(input)
     }
+    
+    func getCastList(_ input: GetCastListInput) -> Observable<Cast> {
+        return request(input)
+    }
+    
+    func getListMovieByCast(_ input: GetMovieListByCastInput) -> Observable<GetMovieListByCastOutput> {
+        return request(input)
+    }
 
 }
 
@@ -85,4 +93,41 @@ extension API {
                        requireAccessToken: true)
         }
     }
+    
+// MARK: - GetRepoList
+    final class GetCastListInput: APIInput {
+        init(id: Int) {
+            let params: JSONDictionary = [
+                "api_key": Keys.APIKey
+            ]
+            super.init(urlString: API.Urls.getCastList + String(id),
+                       parameters: params,
+                       requestType: .get,
+                       requireAccessToken: true)
+        }
+    }
+    
+    final class GetMovieListByCastInput: APIInput {
+        init(id: Int, page: Int) {
+            let params: JSONDictionary = [
+                "api_key": Keys.APIKey,
+                "with_cast": id,
+                "page": page
+            ]
+            super.init(urlString: API.Urls.getMovieListByCast,
+                       parameters: params,
+                       requestType: .get,
+                       requireAccessToken: true)
+        }
+    }
+    
+    final class GetMovieListByCastOutput: APIOutput {
+        private(set) var movies: [Movie]?
+        
+        override func mapping(map: Map) {
+            super.mapping(map: map)
+            movies <- map["results"]
+        }
+    }
+
 }

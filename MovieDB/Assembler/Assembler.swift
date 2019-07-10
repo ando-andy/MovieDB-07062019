@@ -8,6 +8,7 @@
 
 protocol Assembler: class,
     CategoriesAssembler,
+    CastAssembler,
     FavoriteAssembler,
     MoviesAssembler,
     MainAssembler,

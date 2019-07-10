@@ -2,7 +2,6 @@
 //  MovieDetailViewModel.swift
 //
 //  Created by kazutaka.ando on 6/27/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
 //
 
 struct MovieDetailViewModel {
@@ -15,12 +14,15 @@ struct MovieDetailViewModel {
 extension MovieDetailViewModel: ViewModelType {
     struct Input {
         let loadTrigger: Driver<Void>
+        let showCastDetailTrigger: Driver<IndexPath>
         let backwardTrigger: Driver<Void>
     }
 
     struct Output {
         let movieDetail: Driver<Movie>
+        let castList: Driver<[Cast]>
         let backward: Driver<Void>
+        let showCastDetail: Driver<Void>
     }
 
     func transform(_ input: Input) -> Output {
@@ -35,12 +37,26 @@ extension MovieDetailViewModel: ViewModelType {
                     .asDriverOnErrorJustComplete()
             }
         
+        let castList = movieDetail
+            .map { $0.castList }
+        
+        let showCastDetail = input.showCastDetailTrigger
+            .withLatestFrom(castList) {
+                return $1[$0.row]
+            }
+            .do(onNext: { (cast) in
+                self.navigator.toCastDetail(cast: cast)
+            })
+            .mapToVoid()
+        
         let backward = input.backwardTrigger
             .do(onNext: {
                 self.navigator.backward()
             })
 
         return Output(movieDetail: movieDetail,
-                      backward: backward)
+                      castList: castList,
+                      backward: backward,
+                      showCastDetail: showCastDetail)
     }
 }

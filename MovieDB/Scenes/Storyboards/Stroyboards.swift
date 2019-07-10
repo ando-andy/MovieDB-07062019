@@ -13,6 +13,7 @@ enum Storyboards {
     static let movie = UIStoryboard(name: "Movie", bundle: nil)
     static let movieDetail = UIStoryboard(name: "MovieDetail", bundle: nil)
     static let categories = UIStoryboard(name: "Categories", bundle: nil)
+    static let cast = UIStoryboard(name: "Cast", bundle: nil)
     static let favorite = UIStoryboard(name: "Favorite", bundle: nil)
     static let search = UIStoryboard(name: "Search", bundle: nil)
 }

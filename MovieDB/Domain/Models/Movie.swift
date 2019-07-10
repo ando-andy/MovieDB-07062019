@@ -17,6 +17,7 @@ struct Movie {
     var voteAverage: Double
     var backdropPath: String
     var runtime: Int
+    var castList: [Cast]
 }
 
 extension Movie {
@@ -29,7 +30,8 @@ extension Movie {
             voteCount: 0,
             voteAverage: 0.0,
             backdropPath: "",
-            runtime: 0
+            runtime: 0,
+            castList: []
         )
     }
 }
@@ -51,5 +53,6 @@ extension Movie: Mappable {
         backdropPath <- map["backdrop_path"]
         runtime <- map["runtime"]
         voteAverage <- map["vote_average"]
+        castList <- map["credits.cast"]
     }
 }

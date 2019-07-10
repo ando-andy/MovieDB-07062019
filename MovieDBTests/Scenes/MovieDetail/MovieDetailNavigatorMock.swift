@@ -2,20 +2,20 @@
 //  MovieDetailNavigatorMock.swift
 //
 //  Created by kazutaka.ando on 6/27/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
+
 //
 
 @testable import MovieDB
 
 final class MovieDetailNavigatorMock: MovieDetailNavigatorType {
-    
+
+    var toCastDetailCalled = false
     var backwardCalled = false
     
     // MARK: - CastDetail
-    func toCastDetail() {
-        //TODO
+    func toCastDetail(cast: Cast) {
+        toCastDetailCalled = true
     }
-    
     // MARK: - backWard
     func backward() {
         backwardCalled = true

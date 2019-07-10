@@ -2,7 +2,7 @@
 //  MovieDetailUseCaseMock.swift
 //
 //  Created by kazutaka.ando on 6/27/19.
-//  Copyright © 2019 Sun Asterisk. All rights reserved.
+
 //
 
 @testable import MovieDB
@@ -16,7 +16,7 @@ final class MovieDetailUseCaseMock: MovieDetailUseCaseType {
     var getMovieDetailReturnValue: Observable<Movie> = {
         let item = Movie().with {
             $0.id = 1
-            //TODO
+            $0.castList = [Cast()]
         }
         return Observable.just(item)
     }()
