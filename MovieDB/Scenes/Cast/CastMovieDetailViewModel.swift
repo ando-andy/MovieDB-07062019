@@ -40,7 +40,7 @@ struct CastMovieDetailViewModel {
     }
     
     var birthdayString: String {
-        return cast.birthday.toString(dateFormat: "dd-MM-yyyy")
+        return cast.birthday.toString(dateFormat: DateFormatter.Format.date.rawValue)
     }
     
     var knowFor: String {

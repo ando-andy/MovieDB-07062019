@@ -26,6 +26,6 @@ final class CastRepository: CastRepositoryType {
                     throw APIInvalidResponseError()
                 }
                 return PagingInfo<Movie>(page: page, items: movies)
-        }
+            }
     }
 }

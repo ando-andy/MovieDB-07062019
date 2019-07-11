@@ -10,7 +10,7 @@ import RxSwift
 
 final class CastUseCaseMock: CastUseCaseType {
 
-    //MARK:- getCastDetail
+    // MARK: - getCastDetail
     var getCastDetailCalled = false
     
     var getCastDetailReturnValue: Observable<Cast> = {
@@ -25,7 +25,7 @@ final class CastUseCaseMock: CastUseCaseType {
         return getCastDetailReturnValue
     }
     
-    //MARK:- getMovieListByCast
+    // MARK: - getMovieListByCast
     var getMovieListByCastCalled = false
     
     var getMovieListByCastReturnValue: Observable<PagingInfo<Movie>> = {
@@ -41,7 +41,7 @@ final class CastUseCaseMock: CastUseCaseType {
         return getMovieListByCastReturnValue
     }
     
-    //MARK:- loadMoreMovieListByCast
+    // MARK: - loadMoreMovieListByCast
     var loadMoreMovieListByCastCalled = false
     
     var loadMoreMovieListByCastReturnValue: Observable<PagingInfo<Movie>> = {

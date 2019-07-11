@@ -64,7 +64,7 @@ final class MovieDetailViewController: UIViewController, BindableType {
     func bindViewModel() {
         let input = MovieDetailViewModel.Input(
             loadTrigger: Driver.just(()),
-            showCastDetailTrigger: showCastDetailTrigger.asDriverOnErrorJustComplete(),
+            showCastDetailTrigger: castCollectionView.rx.itemSelected.asDriver(),
             backwardTrigger: backButton.rx.tap.asDriverOnErrorJustComplete()
         )
         

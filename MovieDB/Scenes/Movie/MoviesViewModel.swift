@@ -105,7 +105,7 @@ extension MoviesViewModel: ViewModelType {
             }
             .do(onNext: { (movie) in
                 self.navigator.toMovieDetail(movie: movie)
-                })
+            })
             .mapToVoid()
         
         let selectedMovie = input.selectedMovieTrigger
