@@ -16,6 +16,7 @@ extension MovieDetailViewModel: ViewModelType {
         let loadTrigger: Driver<Void>
         let showCastDetailTrigger: Driver<IndexPath>
         let backwardTrigger: Driver<Void>
+        let showReviewTrigger: Driver<Void>
     }
 
     struct Output {
@@ -23,6 +24,7 @@ extension MovieDetailViewModel: ViewModelType {
         let castList: Driver<[Cast]>
         let backward: Driver<Void>
         let showCastDetail: Driver<Void>
+        let showReviews: Driver<Void>
     }
 
     func transform(_ input: Input) -> Output {
@@ -49,6 +51,11 @@ extension MovieDetailViewModel: ViewModelType {
             })
             .mapToVoid()
         
+        let showReviews = input.showReviewTrigger
+            .do(onNext: {
+                self.navigator.toReviews(movie: self.movie)
+            })
+        
         let backward = input.backwardTrigger
             .do(onNext: {
                 self.navigator.backward()
@@ -57,6 +64,7 @@ extension MovieDetailViewModel: ViewModelType {
         return Output(movieDetail: movieDetail,
                       castList: castList,
                       backward: backward,
-                      showCastDetail: showCastDetail)
+                      showCastDetail: showCastDetail,
+                      showReviews: showReviews)
     }
 }

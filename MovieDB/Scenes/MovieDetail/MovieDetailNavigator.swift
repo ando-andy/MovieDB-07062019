@@ -7,6 +7,7 @@
 protocol MovieDetailNavigatorType {
     func toCastDetail(cast: Cast)
     func backward()
+    func toReviews(movie: Movie)
 }
 
 struct MovieDetailNavigator: MovieDetailNavigatorType {
@@ -21,5 +22,11 @@ struct MovieDetailNavigator: MovieDetailNavigatorType {
     
     func backward() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func toReviews(movie: Movie) {
+        let vc: ReviewsViewController = assembler.resolve(navigationController: navigationController,
+                                                          movie: movie)
+        navigationController.pushViewController(vc, animated: true)
     }
 }

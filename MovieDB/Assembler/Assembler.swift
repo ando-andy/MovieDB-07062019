@@ -15,6 +15,7 @@ protocol Assembler: class,
     MovieDetailAssembler,
     RepositoriesAssembler,
     SearchAssembler,
+    ReviewsAssembler,
     AppAssembler {
     
 }

@@ -67,7 +67,7 @@ final class CastViewController: UIViewController, BindableType {
         let output = viewModel.transform(input)
         
         output.castList
-            .map{ CastMovieDetailViewModel(cast: $0) }
+            .map { CastMovieDetailViewModel(cast: $0) }
             .drive(cast)
             .disposed(by: rx.disposeBag)
         

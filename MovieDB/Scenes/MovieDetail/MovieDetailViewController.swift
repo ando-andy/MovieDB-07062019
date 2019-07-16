@@ -16,7 +16,8 @@ final class MovieDetailViewController: UIViewController, BindableType {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var reviewView: CosmosView!
-    @IBOutlet weak var overviewLabel: UILabel!
+    
+    @IBOutlet weak var reviewButton: UIButton!
     @IBOutlet weak var overViewLabel2: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var castLabel: UILabel!
@@ -65,7 +66,8 @@ final class MovieDetailViewController: UIViewController, BindableType {
         let input = MovieDetailViewModel.Input(
             loadTrigger: Driver.just(()),
             showCastDetailTrigger: castCollectionView.rx.itemSelected.asDriver(),
-            backwardTrigger: backButton.rx.tap.asDriverOnErrorJustComplete()
+            backwardTrigger: backButton.rx.tap.asDriverOnErrorJustComplete(),
+            showReviewTrigger: reviewButton.rx.tap.asDriverOnErrorJustComplete()
         )
         
         let output = viewModel.transform(input)
@@ -93,9 +95,10 @@ final class MovieDetailViewController: UIViewController, BindableType {
         output.showCastDetail
             .drive()
             .disposed(by: rx.disposeBag)
-    }
-    
-    @IBAction func showReviewButton(_ sender: Any) {
+        
+        output.showReviews
+            .drive()
+            .disposed(by: rx.disposeBag)
     }
     
     @IBAction func watchTrailerButton(_ sender: Any) {

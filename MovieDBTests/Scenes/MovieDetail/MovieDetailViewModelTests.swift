@@ -23,6 +23,7 @@ final class MovieDetailViewModelTests: XCTestCase {
     private let loadTrigger = PublishSubject<Void>()
     private let showCastDetailTrigger = PublishSubject<IndexPath>()
     private let backwardTrigger = PublishSubject<Void>()
+    private let showReviewTrigger = PublishSubject<Void>()
     
     override func setUp() {
         super.setUp()
@@ -36,7 +37,8 @@ final class MovieDetailViewModelTests: XCTestCase {
         input = MovieDetailViewModel.Input(
             loadTrigger: loadTrigger.asDriverOnErrorJustComplete(),
             showCastDetailTrigger: showCastDetailTrigger.asDriverOnErrorJustComplete(),
-            backwardTrigger: backwardTrigger.asDriverOnErrorJustComplete()
+            backwardTrigger: backwardTrigger.asDriverOnErrorJustComplete(),
+            showReviewTrigger: showReviewTrigger.asDriverOnErrorJustComplete()
         )
         
         output = viewModel.transform(input)

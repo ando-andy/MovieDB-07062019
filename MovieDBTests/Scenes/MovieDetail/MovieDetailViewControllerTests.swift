@@ -24,12 +24,11 @@ final class MovieDetailControllerTests: XCTest {
         XCTAssertNotNil(viewController.posterImage)
         XCTAssertNotNil(viewController.titleLabel)
         XCTAssertNotNil(viewController.timeLabel)
-        XCTAssertNotNil(viewController.overviewLabel)
+        XCTAssertNotNil(viewController.reviewButton)
         XCTAssertNotNil(viewController.castCollectionView)
         XCTAssertNotNil(viewController.reviewView)
         XCTAssertNotNil(viewController.backButton)
         XCTAssertNotNil(viewController.watchTrailerButton)
-        XCTAssertNotNil(viewController.showReviewButton)
         XCTAssertNotNil(viewController.addFavoriteButton)
     }
 }

@@ -108,9 +108,6 @@
                                                 <state key="normal" title="Review">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="showReviewButton:" destination="Tmf-2E-Bpn" eventType="touchUpOutside" id="cag-FQ-d7C"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rF-ss-bkA">
                                                 <rect key="frame" x="8" y="401.5" width="112.5" height="20"/>
@@ -260,6 +257,7 @@
                         <outlet property="castLabel" destination="OD2-Ea-bVP" id="dxF-IH-YYZ"/>
                         <outlet property="overViewLabel2" destination="G2A-KA-ywm" id="GoS-ae-cH3"/>
                         <outlet property="posterImage" destination="W2P-7k-b39" id="hAd-29-ouT"/>
+                        <outlet property="reviewButton" destination="eED-MK-f3z" id="dqC-Md-E20"/>
                         <outlet property="reviewView" destination="zRF-n6-mGf" id="2bX-eg-ijI"/>
                         <outlet property="timeLabel" destination="LUm-T8-kqK" id="LFC-X6-6YA"/>
                         <outlet property="titleLabel" destination="OKM-kH-2CH" id="ObB-Li-JW5"/>

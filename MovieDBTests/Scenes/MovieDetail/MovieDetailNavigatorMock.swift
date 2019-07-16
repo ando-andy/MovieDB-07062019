@@ -20,4 +20,9 @@ final class MovieDetailNavigatorMock: MovieDetailNavigatorType {
     func backward() {
         backwardCalled = true
     }
+    
+    // MARK: - Review
+    func toReviews(movie: Movie) {
+        
+    }
 }

@@ -24,4 +24,8 @@ extension RepositoriesAssembler where Self: DefaultAssembler {
     func resolve() -> CastRepositoryType {
         return CastRepository()
     }
+    
+    func resolve() -> ReviewsRepositoryType {
+        return ReviewsRepository()
+    }
 }
