@@ -13,7 +13,7 @@ final class ReviewsUseCaseMock: ReviewsUseCaseType {
     var getReviewListCalled = false
     
     var getReviewListReturnValue: Observable<PagingInfo<Review>> = {
-        let items = [Review().with { $0.id = "1" }]
+        let items = [ Review().with { $0.id = "1" } ]
         let page = PagingInfo<Review>(page: 1, items: items)
         return Observable.just(page)
     }()

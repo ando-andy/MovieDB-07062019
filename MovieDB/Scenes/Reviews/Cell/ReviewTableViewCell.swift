@@ -14,7 +14,7 @@ final class ReviewTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet weak var reviewerLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
-    func bindinigViewModel(_ reviewViewModel: ReviewViewModel?) {
+    func bindViewModel(_ reviewViewModel: ReviewViewModel?) {
         reviewerLabel.text = reviewViewModel?.author ?? ""
         contentLabel.text = reviewViewModel?.content ?? ""
     }

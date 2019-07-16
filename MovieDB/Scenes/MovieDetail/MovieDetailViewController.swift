@@ -11,17 +11,17 @@ import Cosmos
 final class MovieDetailViewController: UIViewController, BindableType {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var backDropImage: UIImageView!
-    @IBOutlet weak var posterImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var reviewView: CosmosView!
+    @IBOutlet private weak var backDropImage: UIImageView!
+    @IBOutlet private weak var posterImage: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var timeLabel: UILabel!
+    @IBOutlet private weak var reviewView: CosmosView!
     
-    @IBOutlet weak var reviewButton: UIButton!
-    @IBOutlet weak var overViewLabel2: UILabel!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var castLabel: UILabel!
-    @IBOutlet weak var castCollectionView: UICollectionView!
+    @IBOutlet private weak var reviewButton: UIButton!
+    @IBOutlet private weak var overViewLabel2: UILabel!
+    @IBOutlet private weak var backButton: UIButton!
+    @IBOutlet private weak var castLabel: UILabel!
+    @IBOutlet private weak var castCollectionView: UICollectionView!
     
     // MARK: - Properties
     

@@ -50,7 +50,7 @@ final class ReviewsViewController: UIViewController, BindableType {
                     for: IndexPath(row: index, section: 0),
                     cellType: ReviewTableViewCell.self)
                     .then {
-                        $0.bindinigViewModel(ReviewViewModel(review: review))
+                        $0.bindViewModel(ReviewViewModel(review: review))
                     }
             }
             .disposed(by: rx.disposeBag)

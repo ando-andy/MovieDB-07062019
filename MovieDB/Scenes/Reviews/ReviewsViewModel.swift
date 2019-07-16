@@ -30,8 +30,9 @@ extension ReviewsViewModel: ViewModelType {
     
     func transform(_ input: Input) -> Output {
         
-        let loadMoreOutput = configPagination(loadTrigger: input.loadTrigger,
-                                              getItems: {self.useCase.getReviewList(self.movie.id)
+        let loadMoreOutput = configPagination(
+            loadTrigger: input.loadTrigger,
+            getItems: {self.useCase.getReviewList(self.movie.id)
         },
             reloadTrigger: input.reloadTrigger,
             reloadItems: {
